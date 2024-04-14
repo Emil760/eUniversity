@@ -1,0 +1,67 @@
+server:
+  port: 8080
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017
+      database: riverburg
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 20MB
+      max-request-size: 20MB
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
+  mail:
+    host: smtp.gmail.com
+    port: 465
+    username: riverburg.university@gmail.com
+    password: ljmplxgviffxwchm
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls.enable: true
+          ssl.enable: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+#JWT
+jwt:
+  secret: S4:N-0.,3x+Dq.)mi^gMy+u[OFyH7"
+  expiration: 15
+
+#STORAGE
+storage:
+  mail:
+    reset-password: storage/mail/change-pass-mail.html
+    registration: storage/mail/registration.html
+  directory:
+    accounts:
+      avatars: /accounts/avatars
+      descriptions: /accounts/descriptions
+    materials: /materials
+    groups-materials: /groups-materials
+    themes: /themes
+    homeworks: ${storage.directory.themes}/homeworks
+
+url:
+  mail:
+    reset-password: localhost:4200/Reset
+    registration: localhost:4200/Auth/Login
+
+datasource:
+  url: jdbc:sqlserver://localhost:1433;database=Riverburg;encrypt=true;trustServerCertificate=true;
+  driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  dialect: org.hibernate.dialect.SQLServer2008Dialect
+  username: river
+  password: river
+  connection:
+    max-pool-size: 10
+    timeout: 20
+    max-lifetime: 120

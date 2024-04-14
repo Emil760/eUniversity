@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email confirmation</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .content {
+            position: relative;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%;
+            height: fit-content;
+        }
+
+        h1 {
+            font-size: 42px;
+            color: #20B2AA;
+            margin-left: 30px;
+        }
+        
+        h2 {
+            text-align: center;
+            font-size: 32px;
+            line-height: 1.25;
+            color: #777;
+        }
+
+        h3 {
+            font-size: 24px;
+            line-height: 1.25;
+            color: #777;
+        }
+
+        p {
+            color: #777;
+        }
+
+        a {
+            padding: 10px 10px;
+            box-sizing: border-box;
+            border-radius: 15px;
+            width: 200px;
+            height: fit-content;
+            font-size: 24px;
+            color: #fff;
+            background-color: #20B2AA;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease 0s;
+            outline: none;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+            margin: 50px auto;
+        }
+
+        a:hover {
+            background-color: #178f89;
+        }
+
+        @media screen and (max-width: 440px) {
+            h1 {
+                margin-left: 0;
+            }
+
+            .content {
+                left: 40%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Riverburg</h1>
+        <hr>
+        <h2>Password reset</h2>
+        <h3>If you're lost your password and wish to reset it, use the link below to get started</h3>
+        <a href="reset-password-link">Change password</a>
+        <p>If you did not request a password reset, you can safety ignore this email. Only a person with access to your email can reset your account password.</p>
+
+    </div>
+
+</body>
+</html>
